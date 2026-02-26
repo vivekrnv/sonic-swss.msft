@@ -1556,7 +1556,8 @@ bool Srv6Orch::createUpdateMysidEntry(string my_sid_string, const string dt_vrf,
             return false;
         }
 
-        sai_object_id_t term_entry_oid;
+        /*
+	sai_object_id_t term_entry_oid;
         ok = createMySidIpInIpTunnelTermEntry(tunnel_oid, my_sid_entry.sid, term_entry_oid);
         if (!ok)
         {
@@ -1565,7 +1566,8 @@ bool Srv6Orch::createUpdateMysidEntry(string my_sid_string, const string dt_vrf,
         }
 
         srv6_my_sid_table_[key_string].tunnel_term_entry = term_entry_oid;
-        srv6_my_sid_table_[key_string].dscp_mode = dscp_mode;
+        */
+	srv6_my_sid_table_[key_string].dscp_mode = dscp_mode;
 
         attr.id = SAI_MY_SID_ENTRY_ATTR_TUNNEL_ID;
         attr.value.oid = tunnel_oid;
